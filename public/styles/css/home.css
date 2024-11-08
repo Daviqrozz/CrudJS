@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header-content{
+    margin: 1px;
+}
+.header-content h2{
+    text-align: center;
+}
+body{
+    background-color: gray;
+}
