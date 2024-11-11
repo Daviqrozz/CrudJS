@@ -16,11 +16,12 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-const { selectProduts } = require('./src/db');  
+const { selectProduts } = require('./src/db');
+  
 app.get('/produts', async (req, res) => {
     try {
         const results = await selectProduts();
-        res.json(results);
+        res.render('produts', { produtos: results });
     } catch (error) {
         console.error("Erro ao buscar produtos:", error);
         res.status(500).send("Erro ao buscar produtos");
